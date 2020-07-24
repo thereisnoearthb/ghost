@@ -42,6 +42,16 @@ module.exports = {
          *  Content Plugins
          */
         {
+    resolve: `gatsby-transformer-rehype`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-rehype-ghost-links`,
+        },
+      ],
+    },
+  },
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: path.join(__dirname, `src`, `pages`),
