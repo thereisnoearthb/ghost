@@ -1,0 +1,10 @@
+{
+  "development": {
+    "apiUrl": "https://melodious-tree-beechnut.glitch.me",
+    "contentApiKey": "44542d88943ca99e2d0da85666"
+  },
+  "production": {
+    "apiUrl": "https://melodious-tree-beechnut.glitch.me",
+    "contentApiKey": "44542d88943ca99e2d0da85666"
+  }
+}
