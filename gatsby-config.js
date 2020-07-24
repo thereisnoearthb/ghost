@@ -25,7 +25,18 @@ try {
 if (process.env.NODE_ENV === `production` && config.siteUrl === `http://localhost:8000` && !process.env.SITEURL) {
     throw new Error(`siteUrl can't be localhost and needs to be configured in siteConfig. Check the README.`) // eslint-disable-line
 }
-
+plugins: [
+  {
+    resolve: `gatsby-transformer-rehype`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-rehype-ghost-links`,
+        },
+      ],
+    },
+  },
+]
 /**
 * This is the place where you can tell Gatsby which plugins to use
 * and set them up the way you want.
@@ -41,16 +52,7 @@ module.exports = {
         /**
          *  Content Plugins
          */
-        {
-    resolve: `gatsby-transformer-rehype`,
-    options: {
-      plugins: [
-        {
-          resolve: `gatsby-rehype-ghost-links`,
-        },
-      ],
-    },
-  },
+        
         {
             resolve: `gatsby-source-filesystem`,
             options: {
